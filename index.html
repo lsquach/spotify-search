@@ -37,7 +37,14 @@
           <input type="submit" value="Search" class="btn btn-block btn-success">
         </form>
         <br>
-        <ul id="results"></ul>
+        <div id="results"></div>
+          <!-- handlebars template -->
+           <script id="tracks-template" type="text/x-handlebars-template">
+             {{#each tracks}}
+              <img src= "{{album.images.[2].url}}" / >
+               <p><strong>{{name}}</strong> by {{artists.[0].name}}</p>
+             {{/each}}
+           </script>
       </div>
     </div>
   </div>
